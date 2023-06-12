@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Tip Calculator 💵</h1>
+      <h2>By imcasero</h2>
+    </header>
+    <main>
+      <form action="./src/dataProcess.ts" method="post">
+        <label for="billAmount">Bill Amount:</label>
+        <input type="number" id="billAmount" name="billAmount" required />
+
+        <label for="tipPercentage"
+          >Tip Percentage:
+          <span id="tipValue" class="percentage-value">0</span>%
+        </label>
+        <input
+          type="range"
+          id="tipPercentage"
+          name="tipPercentage"
+          min="0"
+          max="100"
+          step="1"
+          oninput="updateTipValue(this.value)"
+        />
+        <button id="calculateButton">Calcular</button>
+      </form>
+    </main>
+  </body>
+  <script src="./src/index.js"></script>
+</html>
