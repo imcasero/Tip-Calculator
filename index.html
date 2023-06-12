@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/style.css" />
-    <link rel="shortcut icon" href="./public/asset/favicon-16x16.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./public/asset/favicon-16x16.png"
+      type="image/x-icon"
+    />
     <title>Tip Calculator</title>
   </head>
   <body>
     <header>
       <h1>Tip Calculator 💵</h1>
       <h2>By imcasero</h2>
-    </header>
+    </header> 
     <main>
-      <form action="./src/dataProcess.ts" method="post">
+      <form method="post">
         <label for="billAmount">Bill Amount:</label>
         <input type="number" id="billAmount" name="billAmount" required />
 
@@ -34,6 +38,9 @@
         <button id="calculateButton">Calcular</button>
       </form>
     </main>
+    <div id="loader">
+      <img src="./public/asset/loader-gif.gif" alt="" />
+    </div>
   </body>
   <script src="./src/index.js"></script>
 </html>
